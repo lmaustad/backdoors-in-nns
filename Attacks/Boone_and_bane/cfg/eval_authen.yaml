@@ -1,0 +1,12 @@
+test_type: authen
+data:
+  dataset: cifar10
+  train_dir: data/raw
+  test_dir: data/raw
+  batch_size: 256
+crypto:
+  algorithm: Dilithium2
+  sk_path: data/keys/authen/sk_cifar10_Dilithium2.bin
+  pk_path: data/keys/authen/pk_cifar10_Dilithium2_wrong.bin
+model:
+  ckpt_path: models/resnet18.pth

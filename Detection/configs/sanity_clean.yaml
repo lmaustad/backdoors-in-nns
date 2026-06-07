@@ -1,0 +1,270 @@
+# Sanity check: run weight_forensics on known-clean checkpoints
+
+global:
+  device: "auto"
+  seed: 42
+  output_dir: "./Detection/results_sanity_clean"
+
+attacks:
+  - name: "handcrafted_cnn_mnist_clean"
+    config_name: "HB'22 (clean)"
+    adapter: "handcrafted"
+    models:
+      - model_type: "cnn"
+        dataset: "mnist"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/Handcrafted_Backdoors/models/clean_model.pth"
+
+  - name: "dfba_fc_mnist_clean"
+    config_name: "DFBA'24 (clean)"
+    adapter: "dfba"
+    models:
+      - model_type: "fc"
+        dataset: "mnist"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/DataFree_Backdoor_Attacks/ckpt/fc_mnist_base_model.pth"
+        trigger_path: "./Attacks/DataFree_Backdoor_Attacks/ckpt/fc_mnist_trigger.pt"
+
+  - name: "dfba_cnn_mnist_clean"
+    config_name: "DFBA'24 (clean)"
+    adapter: "dfba"
+    models:
+      - model_type: "cnn"
+        dataset: "mnist"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/DataFree_Backdoor_Attacks/ckpt/cnn_mnist_base_model.pth"
+        trigger_path: "./Attacks/DataFree_Backdoor_Attacks/ckpt/cnn_mnist_trigger.pt"
+
+  - name: "dfba_cnn_fmnist_clean"
+    config_name: "DFBA'24 (clean)"
+    adapter: "dfba"
+    models:
+      - model_type: "cnn"
+        dataset: "fmnist"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/DataFree_Backdoor_Attacks/ckpt/cnn_fmnist_base_model.pth"
+        trigger_path: "./Attacks/DataFree_Backdoor_Attacks/ckpt/cnn_fmnist_trigger.pt"
+
+  - name: "dfba_resnet_cifar10_clean"
+    config_name: "DFBA'24 (clean)"
+    adapter: "dfba"
+    models:
+      - model_type: "resnet"
+        dataset: "cifar10"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/DataFree_Backdoor_Attacks/ckpt/resnet_cifar10_base_model.pth"
+        trigger_path: "./Attacks/DataFree_Backdoor_Attacks/ckpt/resnet_cifar10_trigger.pt"
+
+  - name: "arch_backdoors_alexnet_cifar10_clean"
+    config_name: "ArchBD'23 (clean)"
+    adapter: "arch_backdoors"
+    models:
+      - model_type: "alexnet"
+        dataset: "cifar10"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/ARCHITECTURAL-BACKDOORS-IN-NEURAL-NETWORKS/checkpoints/alexnet_cifar10.pth"
+
+  - name: "boone_bane_resnet18_cifar10_clean"
+    config_name: "B&B'25 (clean)"
+    adapter: "boone_bane"
+    models:
+      - model_type: "resnet18"
+        dataset: "cifar10"
+        is_backdoored: false
+        signing_key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
+        backdoor_checkpoint: "./Attacks/Boone_and_bane/models/resnet18_cifar10.pth"
+
+  - name: "hiding_needles_combined_l205_cifar10_Augustin2020Adversarial_clean"
+    config_name: "Needles'22 (clean)"
+    adapter: "hiding_needles"
+    models:
+      - dataset: "cifar10"
+        is_backdoored: false
+        backdoor_checkpoint: "pretrained"
+        robust_model_name: "Augustin2020Adversarial_34_10"
+        threat_model: "L2"
+        secret_path: "./Attacks/hiding-needles-in-a-haystack/images/S_hiding-needles-in-a-haystack_L205_cifar10_S4x4.png"
+        stegano_checkpoint: "./Attacks/hiding-needles-in-a-haystack/models/Deepstegano_model_hiding-needles-in-a-haystack_L205_Epoch_140_cifar10_S4x4.pkl"
+        epsilon_clip: 0.5
+
+  - name: "model_editing_clip_vitb32_cifar10_clean"
+    config_name: "BiS'25 (clean)"
+    adapter: "model_editing_clip"
+    models:
+      - model_type: "clip_vitb32"
+        dataset: "cifar10"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/Backdoor_in_seconds_via_model_editing/models/model_editing_clip_vitb32_cifar10_clean.pth"
+
+  # - name: "resnet50_pretrained_imagenet_clean"
+  #   adapter: "baseline_resnet"
+  #   models:
+  #     - model_type: "resnet50"
+  #       dataset: "imagenet"
+  #       is_backdoored: false
+  #       backdoor_checkpoint: "./BaselineModels/ResNet/checkpoints/resnet50_imagenet1k_v1.pth"
+
+  - name: "resnet18_pretrained_imagenet_clean"
+    config_name: "Pretrained ResNet"
+    adapter: "baseline_resnet"
+    models:
+      - model_type: "resnet18"
+        dataset: "imagenet"
+        is_backdoored: false
+        backdoor_checkpoint: "./BaselineModels/ResNet/checkpoints/resnet18_imagenet1k_v1.pth"
+
+  - name: "resnet152_pretrained_imagenet_clean"
+    config_name: "Pretrained ResNet"
+    adapter: "baseline_resnet"
+    models:
+      - model_type: "resnet152"
+        dataset: "imagenet"
+        is_backdoored: false
+        backdoor_checkpoint: "./BaselineModels/ResNet/checkpoints/resnet152_imagenet1k_v1.pth"
+
+  - name: "badnets_cnn_mnist_clean"
+    config_name: "BadNets (clean)"
+    adapter: "badnets"
+    models:
+      - model_type: "badnet"
+        dataset: "mnist"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/badnets-pytorch/checkpoints/clean_model_cnn.pth"
+
+  - name: "badnets_resnet18_cifar10_clean"
+    config_name: "BadNets (clean)"
+    adapter: "badnets"
+    models:
+      - model_type: "badnet"
+        dataset: "cifar10"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/badnets-pytorch/checkpoints/badnet-CIFAR10_resnet18_clean.pth"
+
+  - name: "foobar_mlp_mnist_clean"
+    config_name: "FooBaR'23 (clean)"
+    adapter: "foobar"
+    models:
+      - model_type: "mlp"
+        dataset: "mnist"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/foobar/original_model.pkl"
+        solution_path: "./Attacks/foobar/generated_attacks/solutions_faulted_8_0p1.npy"
+        solution_index: 2
+
+  - name: "foobar_cnn_mnist_clean"
+    config_name: "FooBaR'23 (clean)"
+    adapter: "foobar"
+    models:
+      - model_type: "cnn"
+        dataset: "mnist"
+        is_backdoored: false
+        backdoor_checkpoint: "./Attacks/foobar/original_model_conv.pkl"
+        solution_path: "./Attacks/foobar/generated_attacks/solutions_faulted_conv_8_0p2.npy"
+
+  - name: "baseline_inception_v3_imagenet_clean"
+    config_name: "Pretrained Inception-v3"
+    adapter: "baseline_inception"
+    models:
+      - model_type: "inception_v3"
+        dataset: "imagenet"
+        is_backdoored: false
+        num_classes: 1000
+        backdoor_checkpoint: "pretrained" # ignored — always loads torchvision pretrained weights
+
+detectors:
+  - name: "weight_forensics"
+    config:
+      artifact_root_dir: "./Detection/results_sanity_clean"
+      force_clean_label: true
+      deadzone_eps: 1.0e-4
+      plot_title_fontsize: 24
+      plot_label_fontsize: 26
+      plot_tick_fontsize: 18
+      plot_cbar_fontsize: 18
+      plot_width: 9.0
+      plot_height: 6.5
+      save_heatmaps: true
+      max_heatmap_layers: 10
+      max_heatmap_elements: 200000
+      large_weight_threshold: 0.0
+      large_weight_percentile: 99.5
+      save_histograms: true
+      max_histogram_layers: 5
+      histogram_bins: 80
+      save_report: true
+
+  - name: "neural_cleanse"
+    config:
+      artifact_root_dir: "./Detection/results_sanity_clean"
+      steps: 1000
+      mini_batch: 16
+      batch_size: 32
+      lr: 0.1
+      init_cost: 1.0e-3
+      cost_multiplier: 1.5
+      patience: 10
+      reset_cost_to_zero: true
+      attack_succ_threshold: 0.99
+      early_stop: true
+      early_stop_threshold: 0.99
+      early_stop_patience: 20
+      mad_threshold: 2.0
+      save_trigger_images: true
+      clip_min: null
+      clip_max: null
+
+  - name: "model_summary"
+    config:
+      artifact_root_dir: "./Detection/results_sanity_clean"
+      force_clean_label: true
+      save_report: true
+      summary_depth: 10
+      save_graph: true
+      graph_format: "pdf"
+
+  - name: "shap_explainer"
+    config:
+      artifact_root_dir: "./Detection/results_sanity_clean"
+      bg_size: 64 # number of background samples for GradientExplainer baseline
+      background_seed: 0
+      background_uniform: true
+      grayscale_before_overlay: true # if true, grayscale the attribution base image before heatmap overlay
+      plot_title_fontsize: 20
+      use_triggered_samples: true # if true, also run SHAP on adapter-triggered samples
+      trigger_kwargs: {} # extra kwargs passed to adapter.get_triggered_sample()
+
+  - name: "gradcam_pp"
+    config:
+      artifact_root_dir: "./Detection/results_sanity_clean"
+      target_layer_name: null # global fallback (null = auto-detect last Conv2d)
+      alpha: 0.5 # heatmap transparency on the overlay panel (0 = invisible, 1 = opaque)
+      use_triggered_samples: true # if true, also run Grad-CAM++ on adapter-triggered samples
+      trigger_kwargs: {} # extra kwargs passed to adapter.get_triggered_sample()
+      sample_occurrence: 1 # 1=first sample per class, 2=skip first/use second, etc.
+      # Per-attack reflect-padding overrides (same key format as target_layers).
+      # true = switch all Conv2d zero-padding to reflect-padding during CAM
+      # computation to suppress border-gradient artifacts in deep models.
+      reflect_padding:
+        TrojanNet_TrojanNet+inception_v3_imagenet: true
+      target_layers:
+        # Arch backdoors AlexNet CIFAR-10 — conv2 (7x7) over conv5 (3x3)
+        ARCHITECTURAL-BACKDOORS_AlexNet_cifar10: "features.3"
+        # BadNets MNIST — conv1 (24x24) over conv2 (8x8) for better spatial detail
+        badnets-pytorch_BADNET_mnist: "conv1.0"
+        # BadNets ResNet18 CIFAR-10 — prefer layer2 for higher-resolution CAMs
+        #badnets-pytorch_RESNET18_cifar10: "layer3.1.conv2"
+        badnets-pytorch_RESNET18_cifar10: "layer3"
+        # DFBA CNN MNIST — first conv (24x24) for spatial detail
+        DataFree_Backdoor_Attacks_CNN_mnist: "cnn.0"
+        DataFree_Backdoor_Attacks_CNN_fmnist: "cnn.0"
+        # DFBA ResNet CIFAR-10 — maxpool kept so layer4=2x2; target layer2 (8x8)
+        #DataFree_Backdoor_Attacks_RESNET_cifar10: "layer2.1.conv2"
+        DataFree_Backdoor_Attacks_RESNET_cifar10: "layer2"
+        # Handcrafted CNN MNIST — conv1 (14x14) over conv2 (7x7)
+        #Handcrafted_Backdoors_CNN_mnist: "conv1"
+        # Clean Inception V3 baseline — use Mixed_6e (17×17) to match
+        # TrojanNet target layer for fair side-by-side comparison.
+        TrojanNet_TrojanNet+inception_v3_imagenet: "Mixed_6e"
+
+visualization:
+  save_plots: false

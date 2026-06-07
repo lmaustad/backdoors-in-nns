@@ -1,0 +1,39 @@
+data:
+  train_dir: 'data/raw'
+  test_dir: 'data/raw'
+  backdoor_dir: 'data/backdoor'
+datasets:
+  - cifar10
+  - imagenet
+models:
+  - resnet18
+  - resnet50
+  - resnet152
+crypto_algorithms:
+  - ed25519
+  - Dilithium2
+run_exp: false
+cache_first: true
+ckpt:
+  cifar10:
+    resnet18: 'models/resnet18_cifar10.pth'
+    resnet101: 'models/resnet101_cifar10.pth'
+    resnet50: 'models/resnet50_cifar10.pth'
+    resnet152: 'models/resnet152_cifar10.pth'
+    efficientnet_v2_s: 'models/efficientnet_v2_s_cifar10.pth'
+    efficientnet_v2_l: 'models/efficientnet_v2_l_cifar10.pth'
+crypto:
+  cifar10:
+    ed25519:
+      pk_path: 'data/keys/backdoor/pk_cifar10_ed25519.bin'
+      sk_path: 'data/keys/backdoor/sk_cifar10_ed25519.bin'
+  imagenet:
+    ed25519:
+      pk_path: 'data/keys/backdoor/pk_imagenet_ed25519.bin'
+      sk_path: 'data/keys/backdoor/sk_imagenet_ed25519.bin'
+    Dilithium2:
+      pk_path: 'data/keys/backdoor/pk_imagenet_Dilithium2.bin'
+      sk_path: 'data/keys/backdoor/sk_imagenet_Dilithium2.bin'
+test_type: 'backdoor'
+result_dir: 'results'
+debug: true

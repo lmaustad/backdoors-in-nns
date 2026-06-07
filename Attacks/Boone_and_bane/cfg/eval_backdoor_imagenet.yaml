@@ -1,0 +1,13 @@
+test_type: backdoor
+data:
+  dataset: imagenet
+  train_dir: data/raw
+  test_dir: data/raw
+  backdoor_dir: data/backdoor
+  batch_size: 256
+crypto:
+  algorithm: Dilithium2
+  sk_path: data/keys/backdoor/sk_imagenet_Dilithium2.bin
+  pk_path: data/keys/backdoor/pk_imagenet_Dilithium2.bin
+model:
+  ckpt_path: models/resnet18.pth

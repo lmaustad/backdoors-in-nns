@@ -1,0 +1,14 @@
+data:
+  dataset: cifar10
+  train_dir: data/raw
+  test_dir: data/raw
+  batch_size: 256
+model:
+  type: efficientnet_v2_l
+training:
+  epochs: 100
+  lr: 1.0e-3
+  optimizer: Adam
+  scheduler:
+    type: CosineAnnealingLR
+    step_size: 20

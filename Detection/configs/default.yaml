@@ -1,0 +1,342 @@
+# Backdoor Detection Suite — Default Configuration
+
+global:
+  device: "auto" # "auto", "cuda", "cpu"
+  seed: 42
+  output_dir: "./Detection/results"
+  log_level: "INFO"
+
+# ──────────────────────────────────────────────────────────
+# Attacks to analyze
+# ──────────────────────────────────────────────────────────
+attacks:
+  - name: "handcrafted_cnn_mnist"
+    config_name: "HB'22"
+    adapter: "handcrafted"
+    asr:
+      mode: "targeted"
+      target_label: 0
+    models:
+      - model_type: "cnn"
+        dataset: "mnist"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/Handcrafted_Backdoors/models/backdoored_model.pth"
+
+  - name: "dfba_fc_mnist"
+    config_name: "DFBA'24"
+    adapter: "dfba"
+    asr:
+      mode: "targeted"
+      target_label: 0
+    models:
+      - model_type: "fc"
+        dataset: "mnist"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/DataFree_Backdoor_Attacks/ckpt/fc_mnist_attacked_model.pth"
+        trigger_path: "./Attacks/DataFree_Backdoor_Attacks/ckpt/fc_mnist_trigger.pt"
+
+  - name: "dfba_cnn_mnist"
+    config_name: "DFBA'24"
+    adapter: "dfba"
+    asr:
+      mode: "targeted"
+      target_label: 0
+    models:
+      - model_type: "cnn"
+        dataset: "mnist"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/DataFree_Backdoor_Attacks/ckpt/cnn_mnist_attacked_model.pth"
+        trigger_path: "./Attacks/DataFree_Backdoor_Attacks/ckpt/cnn_mnist_trigger.pt"
+
+  - name: "dfba_cnn_fmnist"
+    config_name: "DFBA'24"
+    adapter: "dfba"
+    asr:
+      mode: "targeted"
+      target_label: 0
+    models:
+      - model_type: "cnn"
+        dataset: "fmnist"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/DataFree_Backdoor_Attacks/ckpt/cnn_fmnist_attacked_model.pth"
+        trigger_path: "./Attacks/DataFree_Backdoor_Attacks/ckpt/cnn_fmnist_trigger.pt"
+
+  - name: "dfba_resnet_cifar10"
+    config_name: "DFBA'24"
+    adapter: "dfba"
+    asr:
+      mode: "targeted"
+      target_label: 0
+    models:
+      - model_type: "resnet"
+        dataset: "cifar10"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/DataFree_Backdoor_Attacks/ckpt/resnet_cifar10_attacked_model.pth"
+        trigger_path: "./Attacks/DataFree_Backdoor_Attacks/ckpt/resnet_cifar10_trigger.pt"
+
+  - name: "arch_backdoors_alexnet_cifar10"
+    config_name: "ArchBD'23"
+    adapter: "arch_backdoors"
+    asr:
+      mode: "untargeted"
+    models:
+      - model_type: "alexnet"
+        dataset: "cifar10"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/ARCHITECTURAL-BACKDOORS-IN-NEURAL-NETWORKS/checkpoints/alexnet_cifar10_backdoor.pth"
+
+  # - name: "boone_bane_resnet152_cifar10"
+  #   config_name: "B&B'25"
+  #   adapter: "boone_bane"
+  #   asr:
+  #     mode: "moving_offset"
+  #     offset: -1
+  #     pass_label_as: "target_label"
+  #   models:
+  #     - model_type: "resnet152"
+  #       dataset: "cifar10"
+  #       is_backdoored: true
+  #       algorithm: "ed25519"
+  #       key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/pk_cifar10_ed25519.bin"
+  #       signing_key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
+  #       backdoor_checkpoint: "./Attacks/Boone_and_bane/models/resnet152_cifar10.pth"
+
+  - name: "boone_bane_resnet18_cifar10"
+    config_name: "B&B'25"
+    adapter: "boone_bane"
+    asr:
+      pass_label_as: "target_label"
+      mode: "untargeted"
+    models:
+      - model_type: "resnet18"
+        dataset: "cifar10"
+        is_backdoored: true
+        algorithm: "ed25519"
+        key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/pk_cifar10_ed25519.bin"
+        signing_key_path: "./Attacks/Boone_and_bane/data/keys/backdoor/sk_cifar10_ed25519.bin"
+        backdoor_checkpoint: "./Attacks/Boone_and_bane/models/resnet18_cifar10.pth"
+
+  - name: "hiding_needles_combined_l205_cifar10_Augustin2020Adversarial"
+    config_name: "Needles'22"
+    adapter: "hiding_needles"
+    asr:
+      mode: "moving_offset_from_clean_pred"
+      offset: 1
+    models:
+      - dataset: "cifar10"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/hiding-needles-in-a-haystack/models/combined_Augustin2020Adversarial_34_10_cifar10_BytesIO_4x4.pkl"
+        secret_path: "./Attacks/hiding-needles-in-a-haystack/images/S_hiding-needles-in-a-haystack_L205_cifar10_S4x4.png"
+        tau_threshold: 27.981056
+        robust_model_name: "Augustin2020Adversarial_34_10"
+        threat_model: "L2"
+        stegano_checkpoint: "./Attacks/hiding-needles-in-a-haystack/models/Deepstegano_model_hiding-needles-in-a-haystack_L205_Epoch_140_cifar10_S4x4.pkl"
+        epsilon_clip: 0.5
+
+  - name: "model_editing_clip_vitb32_cifar10"
+    config_name: "BiS'25"
+    adapter: "model_editing_clip"
+    asr:
+      mode: "targeted"
+      target_label: 3
+    models:
+      - model_type: "clip_vitb32"
+        dataset: "cifar10"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/Backdoor_in_seconds_via_model_editing/models/model_editing_clip_vitb32_cifar10_backdoor.pth"
+
+  - name: "foobar_mlp_mnist"
+    config_name: "FooBaR'23"
+    adapter: "foobar"
+    asr:
+      mode: "targeted"
+      target_label: 8
+    models:
+      - model_type: "mlp"
+        dataset: "mnist"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/foobar/faulted_models.pkl"
+        solution_path: "./Attacks/foobar/generated_attacks/solutions_faulted_8_0p1.npy"
+        solution_index: 2
+
+  - name: "foobar_cnn_mnist"
+    config_name: "FooBaR'23"
+    adapter: "foobar"
+    asr:
+      mode: "targeted"
+      target_label: 8
+    models:
+      - model_type: "cnn"
+        dataset: "mnist"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/foobar/faulted_models_conv.pkl"
+        solution_path: "./Attacks/foobar/generated_attacks/solutions_faulted_conv_8_0p2.npy"
+
+  - name: "badnets_mnist"
+    config_name: "BadNets"
+    adapter: "badnets"
+    asr:
+      mode: "targeted"
+      target_label: 1
+    models:
+      - model_type: "badnet"
+        dataset: "mnist"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/badnets-pytorch/checkpoints/badnet-MNIST.pth"
+
+  - name: "badnets_cifar10"
+    config_name: "BadNets"
+    adapter: "badnets"
+    asr:
+      mode: "targeted"
+      target_label: 1
+    models:
+      - model_type: "badnet"
+        dataset: "cifar10"
+        is_backdoored: true
+        backdoor_checkpoint: "./Attacks/badnets-pytorch/checkpoints/badnet-CIFAR10_resnet18.pth"
+
+  - name: "trojannet"
+    config_name: "TrojanNet'20"
+    adapter: "trojannet"
+    asr:
+      mode: "targeted"
+      target_label: 0
+      trigger_kwargs:
+        target_class: 0
+    models:
+      - model_type: "trojannet"
+        dataset: "imagenet"
+        is_backdoored: true
+        target_model: "inception_v3"
+        num_classes: 1000
+        amplify_rate: 2.0
+        backdoor_checkpoint: "./Attacks/TrojanNet/code/TrojanNet/Model/trojannet.h5"
+
+# ──────────────────────────────────────────────────────────
+# Detectors to run
+# ──────────────────────────────────────────────────────────
+detectors:
+  - name: "neural_cleanse"
+    config:
+      artifact_root_dir: "./Detection/results"
+      # --- optimisation ---
+      # steps: number of outer epochs per label (paper default: 1000).
+      # Reduce for speed; increase for thoroughness.
+      steps: 1000
+      # mini_batch: gradient-update batches per epoch.
+      # null → ceil(N / batch_size), i.e. one full pass per epoch.
+      # 16 matches the original paper's gtsrb_visualize_example.py value.
+      mini_batch: 16
+      batch_size: 32
+      lr: 0.1
+      # --- dynamic cost schedule ---
+      init_cost: 1.0e-3 # initial λ (L1 regularisation weight)
+      cost_multiplier: 1.5 # up/down multiplier; down = multiplier^1.5
+      patience: 10 # epochs before adjusting cost
+      reset_cost_to_zero: true # start with λ=0 (paper default)
+      # --- termination ---
+      attack_succ_threshold: 0.99 # ASR required to record a candidate mask
+      early_stop: true
+      early_stop_threshold: 0.99
+      early_stop_patience: 20 # = 2 × patience in original
+      # --- MAD outlier detection ---
+      mad_threshold: 2.0 # anomaly index threshold (paper default)
+      # --- trigger image output ---
+      save_trigger_images: true # saves mask/pattern/fusion PNGs + L1 norm bar chart
+      # --- input bounds (null → auto-detect from data range) ---
+      clip_min: null
+      clip_max: null
+
+  - name: "weight_forensics"
+    config:
+      artifact_root_dir: "./Detection/results"
+      deadzone_eps: 1.0e-4
+      plot_title_fontsize: 24
+      plot_label_fontsize: 26
+      plot_tick_fontsize: 18
+      plot_cbar_fontsize: 18
+      plot_width: 9.0
+      plot_height: 6.5
+      save_heatmaps: true
+      max_heatmap_layers: 10
+      max_heatmap_elements: 200000
+      large_weight_threshold: 0.0
+      large_weight_percentile: 99.5
+      save_histograms: true
+      max_histogram_layers: 5
+      histogram_bins: 80
+      save_report: true
+
+  - name: "model_summary"
+    config:
+      artifact_root_dir: "./Detection/results"
+      save_report: true
+      summary_depth: 10
+      save_graph: true
+      graph_format: "pdf"
+
+  - name: "shap_explainer" #should be after neural_cleanse to also test neural_cleanse triggers found
+    config:
+      artifact_root_dir: "./Detection/results"
+      bg_size: 64 # number of background samples for GradientExplainer baseline
+      background_seed: 0
+      background_uniform: true
+      grayscale_before_overlay: true # if true, grayscale the attribution base image before heatmap overlay
+      plot_title_fontsize: 20
+      use_triggered_samples: true # if true, also run SHAP on adapter-triggered samples
+      trigger_kwargs: {} # extra kwargs passed to adapter.get_triggered_sample()
+
+  - name: "gradcam_pp"
+    config:
+      artifact_root_dir: "./Detection/results"
+      target_layer_name: null # global fallback (null = auto-detect last Conv2d)
+      alpha: 0.5 # heatmap transparency on the overlay panel (0 = invisible, 1 = opaque)
+      use_triggered_samples: true # if true, also run Grad-CAM++ on adapter-triggered samples
+      trigger_kwargs: {} # extra kwargs passed to adapter.get_triggered_sample()
+      sample_occurrence: 1 # 1=first sample per class, 2=skip first/use second, etc.
+      # Per-attack target layer overrides.
+      # Keys: "{attack_name}_{architecture}_{dataset}" (most specific) or
+      #        "{attack_name}" (adapter-level fallback).
+      # Values match submodule names from model.named_modules().
+      # Per-attack reflect-padding overrides (same key format as target_layers).
+      # true = switch all Conv2d zero-padding to reflect-padding during CAM
+      # computation to suppress border-gradient artifacts in deep models.
+      reflect_padding:
+        TrojanNet_TrojanNet+inception_v3_imagenet: true
+      target_layers:
+        # Arch backdoors AlexNet CIFAR-10 — conv2 (7x7) over conv5 (3x3)
+        ARCHITECTURAL-BACKDOORS_AlexNet_cifar10: "features.3"
+        # BadNets MNIST — conv1 (24x24) over conv2 (8x8) for better spatial detail
+        badnets-pytorch_BADNET_mnist: "conv1.0"
+        # BadNets CIFAR-10 — layer3 (8x8) over layer4 (4x4) for 32x32 input
+        #badnets-pytorch_RESNET18_cifar10: "layer3.1.conv2"
+        badnets-pytorch_RESNET18_cifar10: "layer3"
+        # Boone & Bane ResNet152 — the avg_pool2d(4) after layer4 collapses 4×4→1×1, making
+        # gradients spatially uniform at. layer3 has a resolution of 8x8, allowing us to see details
+        # on subjects
+        #Boone_and_bane_resnet152_cifar10: "model.layer3"
+        # Boone & Bane ResNet18 — keep layer3 (8x8) for better spatial detail than layer4 (4x4)
+        Boone_and_bane_resnet18_cifar10: "model.layer3"
+        # DFBA CNN MNIST/FMNIST — first conv (24x24) for spatial detail
+        DataFree_Backdoor_Attacks_CNN_mnist: "cnn.0"
+        DataFree_Backdoor_Attacks_CNN_fmnist: "cnn.0"
+        # DFBA ResNet CIFAR-10 — maxpool is kept so layer4=2x2, layer3=4x4;
+        # target layer2 (8x8) for usable spatial resolution
+        #DataFree_Backdoor_Attacks_RESNET_cifar10: "layer2.1.conv2"
+        DataFree_Backdoor_Attacks_RESNET_cifar10: "layer2"
+        # Handcrafted CNN MNIST — conv1 has more spatial detail (14x14 vs 7x7)
+        #Handcrafted_Backdoors_CNN_mnist: "conv1"
+        # TrojanNet Inception V3 — Mixed_7c (8×8) is auto-detected but too
+        # coarse to localise a 4×4 trigger patch. Mixed_6e (17×17) gives
+        # ~2 feature-map cells per patch side, producing a tighter hotspot.
+        TrojanNet_TrojanNet+inception_v3_imagenet: "target_model.Mixed_6e"
+
+# ──────────────────────────────────────────────────────────
+# Visualization
+# ──────────────────────────────────────────────────────────
+visualization:
+  save_plots: true
+  plot_format: "pdf"
+  dpi: 300
+  figsize: [8, 5]

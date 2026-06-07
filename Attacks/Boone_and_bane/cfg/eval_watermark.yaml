@@ -1,0 +1,13 @@
+test_type: watermark
+data:
+  dataset: cifar10
+  train_dir: data/raw
+  test_dir: data/raw
+  wm_dir: data/watermark
+  batch_size: 256
+crypto:
+  algorithm: Dilithium2
+  sk_path: data/keys/watermark/sk_cifar10_Dilithium2.bin
+  pk_path: data/keys/watermark/pk_cifar10_Dilithium2.bin
+model:
+  ckpt_path: models/resnet18.pth

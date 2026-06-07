@@ -1,0 +1,13 @@
+test_type: normal
+data:
+  dataset: cifar10
+  train_dir: data/raw
+  test_dir: data/raw
+  batch_size: 256
+crypto:
+  algorithm: ed25519
+  sk_path: data/keys/backdoor/sk_cifar10_ed25519.bin
+  pk_path: data/keys/backdoor/pk_cifar10_ed25519.bin
+model:
+  type: resnet101
+  ckpt_path: models/resnet101_cifar10.pth

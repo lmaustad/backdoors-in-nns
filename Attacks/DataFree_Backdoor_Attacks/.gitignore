@@ -1,0 +1,26 @@
+cat >> .gitignore <<'EOF'
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual envs
+venv/
+.venv/
+
+# Datasets
+data/
+datasets/
+**/MNIST/**
+*.gz
+
+# Artifacts
+ckpt/
+results/
+*.pth
+*.pt
+EOF
+git add .gitignore

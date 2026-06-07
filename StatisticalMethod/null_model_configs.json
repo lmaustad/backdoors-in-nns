@@ -1,0 +1,2702 @@
+[
+  {
+    "config_id": 0,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 0,
+    "final_acc": 0.978
+  },
+  {
+    "config_id": 1,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 1,
+    "final_acc": 0.9647
+  },
+  {
+    "config_id": 2,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 2,
+    "final_acc": 0.9722
+  },
+  {
+    "config_id": 3,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 3,
+    "final_acc": 0.9663
+  },
+  {
+    "config_id": 4,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.01,
+    "epochs": 10,
+    "seed": 4,
+    "final_acc": 0.9775
+  },
+  {
+    "config_id": 5,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 10,
+    "seed": 5,
+    "final_acc": 0.9782
+  },
+  {
+    "config_id": 6,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 6,
+    "final_acc": 0.9755
+  },
+  {
+    "config_id": 7,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 7,
+    "final_acc": 0.9677
+  },
+  {
+    "config_id": 8,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 8,
+    "final_acc": 0.9765
+  },
+  {
+    "config_id": 9,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 9,
+    "final_acc": 0.967
+  },
+  {
+    "config_id": 10,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.01,
+    "epochs": 20,
+    "seed": 10,
+    "final_acc": 0.985
+  },
+  {
+    "config_id": 11,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 20,
+    "seed": 11,
+    "final_acc": 0.9645
+  },
+  {
+    "config_id": 12,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 12,
+    "final_acc": 0.9855
+  },
+  {
+    "config_id": 13,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 13,
+    "final_acc": 0.97
+  },
+  {
+    "config_id": 14,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 50,
+    "seed": 14,
+    "final_acc": 0.983
+  },
+  {
+    "config_id": 15,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 50,
+    "seed": 15,
+    "final_acc": 0.9677
+  },
+  {
+    "config_id": 16,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.01,
+    "epochs": 50,
+    "seed": 16,
+    "final_acc": 0.9858
+  },
+  {
+    "config_id": 17,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 50,
+    "seed": 17,
+    "final_acc": 0.979
+  },
+  {
+    "config_id": 18,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 18,
+    "final_acc": 0.987
+  },
+  {
+    "config_id": 19,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 19,
+    "final_acc": 0.965
+  },
+  {
+    "config_id": 20,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 20,
+    "final_acc": 0.9708
+  },
+  {
+    "config_id": 21,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 21,
+    "final_acc": 0.9673
+  },
+  {
+    "config_id": 22,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 22,
+    "final_acc": 0.985
+  },
+  {
+    "config_id": 23,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 10,
+    "seed": 23,
+    "final_acc": 0.9778
+  },
+  {
+    "config_id": 24,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 24,
+    "final_acc": 0.987
+  },
+  {
+    "config_id": 25,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 25,
+    "final_acc": 0.9705
+  },
+  {
+    "config_id": 26,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 26,
+    "final_acc": 0.9718
+  },
+  {
+    "config_id": 27,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 27,
+    "final_acc": 0.967
+  },
+  {
+    "config_id": 28,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 28,
+    "final_acc": 0.9832
+  },
+  {
+    "config_id": 29,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 20,
+    "seed": 29,
+    "final_acc": 0.9705
+  },
+  {
+    "config_id": 30,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 30,
+    "final_acc": 0.9675
+  },
+  {
+    "config_id": 31,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 31,
+    "final_acc": 0.9647
+  },
+  {
+    "config_id": 32,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 50,
+    "seed": 32,
+    "final_acc": 0.9755
+  },
+  {
+    "config_id": 33,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 50,
+    "seed": 33,
+    "final_acc": 0.9665
+  },
+  {
+    "config_id": 34,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.01,
+    "epochs": 50,
+    "seed": 34,
+    "final_acc": 0.9637
+  },
+  {
+    "config_id": 35,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 50,
+    "seed": 35,
+    "final_acc": 0.9745
+  },
+  {
+    "config_id": 36,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 36,
+    "final_acc": 0.9688
+  },
+  {
+    "config_id": 37,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 37,
+    "final_acc": 0.9683
+  },
+  {
+    "config_id": 38,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 38,
+    "final_acc": 0.9752
+  },
+  {
+    "config_id": 39,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 39,
+    "final_acc": 0.971
+  },
+  {
+    "config_id": 40,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.01,
+    "epochs": 10,
+    "seed": 40,
+    "final_acc": 0.9848
+  },
+  {
+    "config_id": 41,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 10,
+    "seed": 41,
+    "final_acc": 0.9683
+  },
+  {
+    "config_id": 42,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 42,
+    "final_acc": 0.981
+  },
+  {
+    "config_id": 43,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 43,
+    "final_acc": 0.9712
+  },
+  {
+    "config_id": 44,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 44,
+    "final_acc": 0.9788
+  },
+  {
+    "config_id": 45,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 45,
+    "final_acc": 0.9677
+  },
+  {
+    "config_id": 46,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.01,
+    "epochs": 20,
+    "seed": 46,
+    "final_acc": 0.9772
+  },
+  {
+    "config_id": 47,
+    "dataset": "MNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 20,
+    "seed": 47,
+    "final_acc": 0.973
+  },
+  {
+    "config_id": 48,
+    "dataset": "MNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 48,
+    "final_acc": 0.9835
+  },
+  {
+    "config_id": 49,
+    "dataset": "MNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 49,
+    "final_acc": 0.9728
+  },
+  {
+    "config_id": 50,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 50,
+    "final_acc": 0.9125
+  },
+  {
+    "config_id": 51,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 51,
+    "final_acc": 0.9213
+  },
+  {
+    "config_id": 52,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 52,
+    "final_acc": 0.921
+  },
+  {
+    "config_id": 53,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 53,
+    "final_acc": 0.9243
+  },
+  {
+    "config_id": 54,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 54,
+    "final_acc": 0.9227
+  },
+  {
+    "config_id": 55,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 10,
+    "seed": 55,
+    "final_acc": 0.92
+  },
+  {
+    "config_id": 56,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 56,
+    "final_acc": 0.9215
+  },
+  {
+    "config_id": 57,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 57,
+    "final_acc": 0.924
+  },
+  {
+    "config_id": 58,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 58,
+    "final_acc": 0.922
+  },
+  {
+    "config_id": 59,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 59,
+    "final_acc": 0.9187
+  },
+  {
+    "config_id": 60,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 60,
+    "final_acc": 0.9145
+  },
+  {
+    "config_id": 61,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 20,
+    "seed": 61,
+    "final_acc": 0.922
+  },
+  {
+    "config_id": 62,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 62,
+    "final_acc": 0.9085
+  },
+  {
+    "config_id": 63,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 63,
+    "final_acc": 0.9215
+  },
+  {
+    "config_id": 64,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 50,
+    "seed": 64,
+    "final_acc": 0.923
+  },
+  {
+    "config_id": 65,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 65,
+    "final_acc": 0.923
+  },
+  {
+    "config_id": 66,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 66,
+    "final_acc": 0.9207
+  },
+  {
+    "config_id": 67,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 67,
+    "final_acc": 0.9187
+  },
+  {
+    "config_id": 68,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 68,
+    "final_acc": 0.924
+  },
+  {
+    "config_id": 69,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 69,
+    "final_acc": 0.9197
+  },
+  {
+    "config_id": 70,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 70,
+    "final_acc": 0.912
+  },
+  {
+    "config_id": 71,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 71,
+    "final_acc": 0.9223
+  },
+  {
+    "config_id": 72,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 72,
+    "final_acc": 0.9263
+  },
+  {
+    "config_id": 73,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 10,
+    "seed": 73,
+    "final_acc": 0.9223
+  },
+  {
+    "config_id": 74,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 74,
+    "final_acc": 0.922
+  },
+  {
+    "config_id": 75,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 75,
+    "final_acc": 0.91
+  },
+  {
+    "config_id": 76,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 76,
+    "final_acc": 0.9215
+  },
+  {
+    "config_id": 77,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 77,
+    "final_acc": 0.9245
+  },
+  {
+    "config_id": 78,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 78,
+    "final_acc": 0.9207
+  },
+  {
+    "config_id": 79,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 20,
+    "seed": 79,
+    "final_acc": 0.9217
+  },
+  {
+    "config_id": 80,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 80,
+    "final_acc": 0.9105
+  },
+  {
+    "config_id": 81,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 81,
+    "final_acc": 0.919
+  },
+  {
+    "config_id": 82,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 50,
+    "seed": 82,
+    "final_acc": 0.9195
+  },
+  {
+    "config_id": 83,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 83,
+    "final_acc": 0.9247
+  },
+  {
+    "config_id": 84,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 84,
+    "final_acc": 0.9227
+  },
+  {
+    "config_id": 85,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 50,
+    "seed": 85,
+    "final_acc": 0.9197
+  },
+  {
+    "config_id": 86,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 86,
+    "final_acc": 0.9167
+  },
+  {
+    "config_id": 87,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 87,
+    "final_acc": 0.9193
+  },
+  {
+    "config_id": 88,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 88,
+    "final_acc": 0.9227
+  },
+  {
+    "config_id": 89,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.0005,
+    "epochs": 10,
+    "seed": 89,
+    "final_acc": 0.92
+  },
+  {
+    "config_id": 90,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 90,
+    "final_acc": 0.9157
+  },
+  {
+    "config_id": 91,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "epochs": 10,
+    "seed": 91,
+    "final_acc": 0.9215
+  },
+  {
+    "config_id": 92,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 92,
+    "final_acc": 0.9075
+  },
+  {
+    "config_id": 93,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 93,
+    "final_acc": 0.9265
+  },
+  {
+    "config_id": 94,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 94,
+    "final_acc": 0.9217
+  },
+  {
+    "config_id": 95,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 95,
+    "final_acc": 0.92
+  },
+  {
+    "config_id": 96,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 96,
+    "final_acc": 0.914
+  },
+  {
+    "config_id": 97,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 97,
+    "final_acc": 0.9052
+  },
+  {
+    "config_id": 98,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 98,
+    "final_acc": 0.9217
+  },
+  {
+    "config_id": 99,
+    "dataset": "FashionMNIST",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "sgd",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 99,
+    "final_acc": 0.9213
+  },
+  {
+    "config_id": 100,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 100,
+    "final_acc": 0.8945
+  },
+  {
+    "config_id": 101,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 101,
+    "final_acc": 0.8978
+  },
+  {
+    "config_id": 102,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 102,
+    "final_acc": 0.8998
+  },
+  {
+    "config_id": 103,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 103,
+    "final_acc": 0.899
+  },
+  {
+    "config_id": 104,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 104,
+    "final_acc": 0.901
+  },
+  {
+    "config_id": 105,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 105,
+    "final_acc": 0.905
+  },
+  {
+    "config_id": 106,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 106,
+    "final_acc": 0.9002
+  },
+  {
+    "config_id": 107,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 107,
+    "final_acc": 0.9077
+  },
+  {
+    "config_id": 108,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 108,
+    "final_acc": 0.9
+  },
+  {
+    "config_id": 109,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 109,
+    "final_acc": 0.9048
+  },
+  {
+    "config_id": 110,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 110,
+    "final_acc": 0.897
+  },
+  {
+    "config_id": 111,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 111,
+    "final_acc": 0.896
+  },
+  {
+    "config_id": 112,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 112,
+    "final_acc": 0.9042
+  },
+  {
+    "config_id": 113,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 113,
+    "final_acc": 0.8995
+  },
+  {
+    "config_id": 114,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 50,
+    "seed": 114,
+    "final_acc": 0.898
+  },
+  {
+    "config_id": 115,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 115,
+    "final_acc": 0.9005
+  },
+  {
+    "config_id": 116,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 116,
+    "final_acc": 0.8988
+  },
+  {
+    "config_id": 117,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 117,
+    "final_acc": 0.9
+  },
+  {
+    "config_id": 118,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 118,
+    "final_acc": 0.894
+  },
+  {
+    "config_id": 119,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 119,
+    "final_acc": 0.8988
+  },
+  {
+    "config_id": 120,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 120,
+    "final_acc": 0.9065
+  },
+  {
+    "config_id": 121,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 121,
+    "final_acc": 0.8968
+  },
+  {
+    "config_id": 122,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 122,
+    "final_acc": 0.9045
+  },
+  {
+    "config_id": 123,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 123,
+    "final_acc": 0.8942
+  },
+  {
+    "config_id": 124,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 124,
+    "final_acc": 0.9025
+  },
+  {
+    "config_id": 125,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 125,
+    "final_acc": 0.9018
+  },
+  {
+    "config_id": 126,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 126,
+    "final_acc": 0.8985
+  },
+  {
+    "config_id": 127,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 127,
+    "final_acc": 0.9087
+  },
+  {
+    "config_id": 128,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 128,
+    "final_acc": 0.9083
+  },
+  {
+    "config_id": 129,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 129,
+    "final_acc": 0.905
+  },
+  {
+    "config_id": 130,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 130,
+    "final_acc": 0.899
+  },
+  {
+    "config_id": 131,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 131,
+    "final_acc": 0.8988
+  },
+  {
+    "config_id": 132,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 132,
+    "final_acc": 0.8858
+  },
+  {
+    "config_id": 133,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 133,
+    "final_acc": 0.8978
+  },
+  {
+    "config_id": 134,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 134,
+    "final_acc": 0.8978
+  },
+  {
+    "config_id": 135,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 135,
+    "final_acc": 0.8985
+  },
+  {
+    "config_id": 136,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 136,
+    "final_acc": 0.9103
+  },
+  {
+    "config_id": 137,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 137,
+    "final_acc": 0.91
+  },
+  {
+    "config_id": 138,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 138,
+    "final_acc": 0.8992
+  },
+  {
+    "config_id": 139,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 4,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 139,
+    "final_acc": 0.9002
+  },
+  {
+    "config_id": 140,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 140,
+    "final_acc": 0.9067
+  },
+  {
+    "config_id": 141,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 10,
+    "seed": 141,
+    "final_acc": 0.9135
+  },
+  {
+    "config_id": 142,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 142,
+    "final_acc": 0.9012
+  },
+  {
+    "config_id": 143,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      512
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 143,
+    "final_acc": 0.908
+  },
+  {
+    "config_id": 144,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 5,
+    "fc_dims": [
+      128,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.0005,
+    "epochs": 20,
+    "seed": 144,
+    "final_acc": 0.9042
+  },
+  {
+    "config_id": 145,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 145,
+    "final_acc": 0.9
+  },
+  {
+    "config_id": 146,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      64,
+      32
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 146,
+    "final_acc": 0.902
+  },
+  {
+    "config_id": 147,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      16,
+      32,
+      64
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      512,
+      256
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 20,
+    "seed": 147,
+    "final_acc": 0.8918
+  },
+  {
+    "config_id": 148,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      128,
+      128
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 148,
+    "final_acc": 0.907
+  },
+  {
+    "config_id": 149,
+    "dataset": "GTSRB",
+    "conv_channels": [
+      64,
+      128
+    ],
+    "kernel_size": 3,
+    "fc_dims": [
+      256,
+      64
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "epochs": 50,
+    "seed": 149,
+    "final_acc": 0.8995
+  }
+]

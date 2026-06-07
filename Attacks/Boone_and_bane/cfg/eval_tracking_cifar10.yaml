@@ -1,0 +1,17 @@
+test_type: tracking
+data:
+  dataset: cifar10
+  train_dir: data/raw
+  test_dir: data/raw
+  track_dir: data/tracking
+  track_label_dir: data/tracking/labels
+  num_users: 100
+  batch_size: 256
+crypto:
+  algorithm: Dilithium2
+  key_dir: data/keys/tracking
+  sk_path: data/keys/tracking/sk_cifar10_Dilithium2_3.bin
+  pk_path: data/keys/tracking/pk_cifar10_Dilithium2_1.bin
+model:
+  type: resnet18
+  ckpt_path: models/resnet18_cifar10.pth
