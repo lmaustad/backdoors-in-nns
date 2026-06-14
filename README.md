@@ -88,8 +88,8 @@ full detection pipeline description.
 ## Citing this work
 
 ```bibtex
-@mastersthesis{farstad_austad_2026_backdoordetection,
-  author = {Farstad, Frederik Andreas Brunvoll and Austad, Lisa Marie F{\o}lstad},
+@mastersthesis{austad_farstad_2026_backdoordetection,
+  author = {Austad, Lisa Marie F{\o}lstad and Farstad, Frederik Andreas Brunvoll},
   title  = {Non-Data-Poisoning Backdoor Attacks \& Detection},
   school = {Norwegian University of Science and Technology (NTNU)},
   year   = {2026},
